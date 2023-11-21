@@ -7,7 +7,8 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
-using static MashUp.Models.Temperatures;
+using MashUp.Models;
+
 
 
 namespace MashUp.Models
@@ -15,6 +16,7 @@ namespace MashUp.Models
     public class HelperPuebla
     {
         Temperatures dato;
+        Helper nuevo;
 
         string DirBase;
         string Error { get; set; }
@@ -61,7 +63,7 @@ namespace MashUp.Models
                         //Deserializaremos el json a la clase 'DatosClimaPuebla'
                         //la clase
                         dato = JsonConvert.DeserializeObject<Temperatures>(jsoncadena);
-                        
+            
                     }
                     else
                     {

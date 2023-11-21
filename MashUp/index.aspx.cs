@@ -36,9 +36,17 @@ namespace MashUp
             HoraSalida.Text = Helper.ObtenerHoraSalidaSol();
             HoraPuesta.Text = Helper.ObtenerHoraPuestaSol();
 
-            await NuevoHelper.ObtenerData();
-            latitudNuevo.Text = NuevoHelper.obtenerLatitud();
 
+            await NuevoHelper.ObtenerData();
+          
         }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+      
+      NuevoHelper.ciudad = labelCiudad.Text;
+      NuevoHelper.pais = labelPais.Text;
+      latitudNuevo.Text = NuevoHelper.obtenerLatitud();
     }
+  }
 }

@@ -81,7 +81,7 @@
                               <p>Hora de salida del sol: <asp:Label ID="HoraSalida" runat="server" CssClass="title"></asp:Label></p>
                               <p>Hora de puesta del sol: <asp:Label ID="HoraPuesta" runat="server" CssClass="title"></asp:Label></p>
                               <h1>ESTE ES NUEVO</h1>
-                              <asp:Label ID="latitudNuevo" runat="server" Text="Label"></asp:Label>
+                              
                           </div>
                           <div class="modal-footer text-center">
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
@@ -99,9 +99,10 @@
         <form runat="server">
             <div class="container text-center">
                 <h1>Visualizar costos de gasolina</h1>
-                Ciudad:<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                <asp:Button ID="Button1" runat="server" Text="Consultar" CssClass="btn btn-success"/>
-                <iframe width="230" height="200" frameborder="0" runat="server" id="gasolina"></iframe>
+                Ciudad:<asp:TextBox ID="labelCiudad" runat="server"></asp:TextBox>
+                País:<asp:TextBox ID="labelPais" runat="server"></asp:TextBox>
+                <asp:Button ID="Button1" runat="server" Text="Consultar" CssClass="btn btn-success" OnClick="Button1_Click"/>
+                <asp:Label ID="latitudNuevo" runat="server" Text="Label"></asp:Label>
             </div>
         </form> 
     <div class="container text-center mt-4">

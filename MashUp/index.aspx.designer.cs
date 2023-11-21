@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MashUp
-{
-
-
-    public partial class index
-    {
-
+namespace MashUp {
+    
+    
+    public partial class index {
+        
         /// <summary>
         /// Label1 control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace MashUp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-
+        
         /// <summary>
         /// Label2 control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace MashUp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
-
+        
         /// <summary>
         /// LabelTempActual control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace MashUp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelTempActual;
-
+        
         /// <summary>
         /// LabelTempMaxima control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace MashUp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelTempMaxima;
-
+        
         /// <summary>
         /// LabelTempMinima control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace MashUp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelTempMinima;
-
+        
         /// <summary>
         /// ImagenDescriptiva control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace MashUp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image ImagenDescriptiva;
-
+        
         /// <summary>
         /// Label4 control.
         /// </summary>
@@ -76,7 +74,7 @@ namespace MashUp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label4;
-
+        
         /// <summary>
         /// Nubosidad control.
         /// </summary>
@@ -85,7 +83,7 @@ namespace MashUp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Nubosidad;
-
+        
         /// <summary>
         /// Humedad control.
         /// </summary>
@@ -94,7 +92,7 @@ namespace MashUp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Humedad;
-
+        
         /// <summary>
         /// HoraSalida control.
         /// </summary>
@@ -103,7 +101,7 @@ namespace MashUp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label HoraSalida;
-
+        
         /// <summary>
         /// HoraPuesta control.
         /// </summary>
@@ -112,25 +110,25 @@ namespace MashUp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label HoraPuesta;
-
+        
         /// <summary>
-        /// latitudNuevo control.
+        /// labelCiudad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label latitudNuevo;
-
+        protected global::System.Web.UI.WebControls.TextBox labelCiudad;
+        
         /// <summary>
-        /// TextBox1 control.
+        /// labelPais control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
-
+        protected global::System.Web.UI.WebControls.TextBox labelPais;
+        
         /// <summary>
         /// Button1 control.
         /// </summary>
@@ -139,14 +137,14 @@ namespace MashUp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
-
+        
         /// <summary>
-        /// gasolina control.
+        /// latitudNuevo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlIframe gasolina;
+        protected global::System.Web.UI.WebControls.Label latitudNuevo;
     }
 }

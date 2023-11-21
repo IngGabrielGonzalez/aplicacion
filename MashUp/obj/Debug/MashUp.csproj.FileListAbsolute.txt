@@ -59,3 +59,15 @@ C:\Users\Equipo\source\repos\MashUp\MashUp\obj\Debug\MashUp.dll
 C:\Users\Equipo\source\repos\MashUp\MashUp\obj\Debug\MashUp.pdb
 C:\Users\Equipo\source\repos\MashUp\MashUp\bin\Newtonsoft.Json.dll
 C:\Users\Equipo\source\repos\MashUp\MashUp\bin\Newtonsoft.Json.xml
+C:\Users\D5-211\Desktop\aplicacion\MashUp\bin\MashUp.dll.config
+C:\Users\D5-211\Desktop\aplicacion\MashUp\bin\MashUp.dll
+C:\Users\D5-211\Desktop\aplicacion\MashUp\bin\MashUp.pdb
+C:\Users\D5-211\Desktop\aplicacion\MashUp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\D5-211\Desktop\aplicacion\MashUp\bin\Newtonsoft.Json.dll
+C:\Users\D5-211\Desktop\aplicacion\MashUp\bin\Newtonsoft.Json.xml
+C:\Users\D5-211\Desktop\aplicacion\MashUp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\D5-211\Desktop\aplicacion\MashUp\obj\Debug\MashUp.csprojAssemblyReference.cache
+C:\Users\D5-211\Desktop\aplicacion\MashUp\obj\Debug\MashUp.csproj.CoreCompileInputs.cache
+C:\Users\D5-211\Desktop\aplicacion\MashUp\obj\Debug\MashUp.csproj.CopyComplete
+C:\Users\D5-211\Desktop\aplicacion\MashUp\obj\Debug\MashUp.dll
+C:\Users\D5-211\Desktop\aplicacion\MashUp\obj\Debug\MashUp.pdb
