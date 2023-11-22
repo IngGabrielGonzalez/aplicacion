@@ -6,23 +6,13 @@ using System.Web;
 
 namespace MashUp.Models
 {
-    public partial class DataDivisas
+    public class DataDivisas
     {
-        public string Base { get; set; }
-
-
-        public string Target { get; set; }
-
-
-        public long BaseAmount { get; set; }
-
-
-        public double ConvertedAmount { get; set; }
-
-        public double ExchangeRate { get; set; }
-
-        public long LastUpdated { get; set; }
-
-        public Dictionary<string, double> ExchangeRates { get; set; }
+        public string @base { get; set; }
+        public string target { get; set; }
+        public int base_amount { get; set; }
+        public double converted_amount { get; set; }
+        public double exchange_rate { get; set; }
+        public int last_updated { get; set; }
     }
 }

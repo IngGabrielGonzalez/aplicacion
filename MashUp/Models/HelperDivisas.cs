@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace MashUp.Models
 {
@@ -25,6 +26,7 @@ namespace MashUp.Models
         public string monedaNativa { get; set; }
         public string monedaObjetivo { get; set; }
 
+        public string monedasTotales { get; set; }
         public string monto { get; set; }
 
         //Método constructor
@@ -36,7 +38,7 @@ namespace MashUp.Models
 
         public async Task ObtenerDivisa()
         {
-            // Nuestro EndPoint https://exchange-rates.abstractapi.com/v1/live/?api_key=d5facf2d7b944c85a560c6d623b56597&base=mxn
+            // Nuestro EndPoint https://exchange-rates.abstractapi.com/v1/convert/?api_key=d5facf2d7b944c85a560c6d623b56597&base=USD&target=MXN&base_amount=1
 
             //Definimos nuestra Dirección Base
             DirBase = "https://exchange-rates.abstractapi.com";
@@ -44,7 +46,7 @@ namespace MashUp.Models
             //Y nuestro URI
             try
             {
-                string solicitudCliente = $"/v1/live/?api_key=d5facf2d7b944c85a560c6d623b56597&base=mxn";
+                string solicitudCliente = $"/v1/convert/?api_key=d5facf2d7b944c85a560c6d623b56597&base={monedaNativa}&target={monedaObjetivo}&base_amount={monto}";
                 try
                 {
                     //Se crea la instancia HttpCliente, el objeto se destruye al 
@@ -73,7 +75,7 @@ namespace MashUp.Models
                         else
                         {
                             Error = "Se ha producido un error al olicitar el servivio web";
-                            throw new Exception();
+                            throw new Exception();  
                         }
                     }
                 }
@@ -92,6 +94,11 @@ namespace MashUp.Models
             }
         }
 
-        
+
+        public string ObtenerMonto()
+        {
+
+            return data.converted_amount.ToString();
+        }
     }
 }

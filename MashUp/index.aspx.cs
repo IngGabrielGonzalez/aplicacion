@@ -48,7 +48,7 @@ namespace MashUp
             if (!IsPostBack)
             {
                 await helperDivisa.ObtenerDivisa();
-                labelDivisa.Text = helperDivisa.Obtener();
+                ObtenerMoneda();
                 NuevoHelper.ciudad = "Puebla";
                 NuevoHelper.pais = "mx";
                 await NuevoHelper.ObtenerData();
@@ -112,6 +112,36 @@ namespace MashUp
             }
             gasolina.Attributes.Add("src", $"https://petrointelligence.com/api/api_precios.html?consulta=estado&estado={helperGaso.ObtenerAbreviatura()}"); 
         }
+        protected void ObtenerMoneda()
+        {
+            List<string> monedas = new List<string> {
+                "ARS", "AUD", "BCH", "USD", "BGN", "BNB", "BRL", "BTC", "CAD", "CHF", "CNY",
+            "CZK", "DKK", "DOGE", "DZD", "ETH", "EUR", "GBP", "HKD", "HRK", "HUF",
+            "IDR", "ILS", "INR", "ISK", "JPY", "KRW", "LTC", "MAD", "MXN", "MYR",
+            "NOK", "NZD", "PHP", "PLN", "RON", "RUB", "SEK", "SGD", "THB", "TRY",
+            "TWD", "XRP", "ZAR"
+            };
 
+            foreach (string moneda in monedas)
+            {
+                DropDownList1.Items.Add(new ListItem(moneda));
+                DropDownList2.Items.Add(new ListItem(moneda));
+
+            }
+        }
+
+        protected async void Button2_Click(object sender, EventArgs e)
+        {
+
+            helperDivisa.monedaNativa = DropDownList1.SelectedValue;
+            helperDivisa.monedaObjetivo = DropDownList2.SelectedValue;
+
+            helperDivisa.monto = montoDeseado.Text;
+            await helperDivisa.ObtenerDivisa();
+            resultadoConversion.Text = helperDivisa.ObtenerMonto();
+
+            
+
+        }
     }
 }
