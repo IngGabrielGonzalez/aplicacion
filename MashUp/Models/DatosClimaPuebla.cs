@@ -63,7 +63,6 @@ namespace MashUp.Models
         public double temp_max { get; set; }
 
         
-        public long Pressure { get; set; }
 
         public long Humidity { get; set; }
 

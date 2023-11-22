@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MashUp {
-    
-    
-    public partial class index {
-        
+namespace MashUp
+{
+
+
+    public partial class index
+    {
+
         /// <summary>
         /// Label1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace MashUp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
+
         /// <summary>
         /// Label2 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace MashUp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
-        
+
         /// <summary>
         /// LabelTempActual control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace MashUp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelTempActual;
-        
+
         /// <summary>
         /// LabelTempMaxima control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace MashUp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelTempMaxima;
-        
+
         /// <summary>
         /// LabelTempMinima control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace MashUp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelTempMinima;
-        
+
         /// <summary>
         /// ImagenDescriptiva control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace MashUp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image ImagenDescriptiva;
-        
+
         /// <summary>
         /// Label4 control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace MashUp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label4;
-        
+
         /// <summary>
         /// Nubosidad control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace MashUp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Nubosidad;
-        
+
         /// <summary>
         /// Humedad control.
         /// </summary>
@@ -92,7 +94,16 @@ namespace MashUp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Humedad;
-        
+
+        /// <summary>
+        /// descripcion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label descripcion;
+
         /// <summary>
         /// HoraSalida control.
         /// </summary>
@@ -101,7 +112,7 @@ namespace MashUp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label HoraSalida;
-        
+
         /// <summary>
         /// HoraPuesta control.
         /// </summary>
@@ -110,7 +121,7 @@ namespace MashUp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label HoraPuesta;
-        
+
         /// <summary>
         /// labelCiudad control.
         /// </summary>
@@ -119,7 +130,7 @@ namespace MashUp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox labelCiudad;
-        
+
         /// <summary>
         /// labelPais control.
         /// </summary>
@@ -128,7 +139,7 @@ namespace MashUp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox labelPais;
-        
+
         /// <summary>
         /// Button1 control.
         /// </summary>
@@ -137,14 +148,113 @@ namespace MashUp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
-        
+
         /// <summary>
-        /// latitudNuevo control.
+        /// labelError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label latitudNuevo;
+        protected global::System.Web.UI.WebControls.Label labelError;
+
+        /// <summary>
+        /// nombre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label nombre;
+
+        /// <summary>
+        /// temp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label temp;
+
+        /// <summary>
+        /// tempMax control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label tempMax;
+
+        /// <summary>
+        /// tempMin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label tempMin;
+
+        /// <summary>
+        /// Image1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image1;
+
+        /// <summary>
+        /// nubo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label nubo;
+
+        /// <summary>
+        /// hume control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label hume;
+
+        /// <summary>
+        /// horaSa control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label horaSa;
+
+        /// <summary>
+        /// horaPu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label horaPu;
+
+        /// <summary>
+        /// gasolina control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlIframe gasolina;
+
+        /// <summary>
+        /// labelDivisa control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label labelDivisa;
     }
 }

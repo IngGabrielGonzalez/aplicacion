@@ -77,10 +77,11 @@
                               <asp:Label ID="Label4" runat="server" Text="title" CssClass=""> °</asp:Label>
                               <p>Nubosidad: <asp:Label ID="Nubosidad" runat="server" CssClass="title"></asp:Label></p>
                               <p>Humedad: <asp:Label ID="Humedad" runat="server" CssClass="title"></asp:Label></p>
+                              <p>Descripción: <asp:Label ID="descripcion" runat="server" CssClass="title"></asp:Label></p>
 
                               <p>Hora de salida del sol: <asp:Label ID="HoraSalida" runat="server" CssClass="title"></asp:Label></p>
                               <p>Hora de puesta del sol: <asp:Label ID="HoraPuesta" runat="server" CssClass="title"></asp:Label></p>
-                              <h1>ESTE ES NUEVO</h1>
+
                               
                           </div>
                           <div class="modal-footer text-center">
@@ -96,17 +97,64 @@
     </div>
    
 
-        <form runat="server">
+        <form runat="server" class="text-center">
             <div class="container text-center">
                 <h1>Visualizar costos de gasolina</h1>
                 Ciudad:<asp:TextBox ID="labelCiudad" runat="server"></asp:TextBox>
                 País:<asp:TextBox ID="labelPais" runat="server"></asp:TextBox>
                 <asp:Button ID="Button1" runat="server" Text="Consultar" CssClass="btn btn-success" OnClick="Button1_Click"/>
-                <asp:Label ID="latitudNuevo" runat="server" Text="Label"></asp:Label>
+                <asp:Label ID="labelError" runat="server" CssClass="title text-danger"></asp:Label>
             </div>
+<div class="table-responsive">
+    <table class="table table-bordered table-striped table-hover table-success">
+        <tr>
+            <th>Nombre:</th>
+            <td><asp:Label ID="nombre" runat="server" CssClass="title"></asp:Label></td>
+        </tr>
+        <tr>
+            <th>Temperatura actual:</th>
+            <td><asp:Label ID="temp" runat="server" CssClass="title"></asp:Label></td>
+        </tr>
+        <tr>
+            <th>Temperatura máxima:</th>
+            <td><asp:Label ID="tempMax" runat="server" CssClass="title"></asp:Label></td>
+        </tr>
+        <tr>
+            <th>Temperatura mínima:</th>
+            <td><asp:Label ID="tempMin" runat="server" CssClass="title"></asp:Label></td>
+        </tr>
+        <tr>
+            <th>Imagen:</th>
+            <td><asp:Image ID="Image1" src="" alt="imagen-descriptiva" runat="server" CssClass="img-fluid" /></td>
+        </tr>
+        <tr>
+            <th>Nubosidad:</th>
+            <td><asp:Label ID="nubo" runat="server" CssClass="title"></asp:Label></td>
+        </tr>
+        <tr>
+            <th>Humedad:</th>
+            <td><asp:Label ID="hume" runat="server" CssClass="title"></asp:Label></td>
+        </tr>
+        <tr>
+            <th>Hora de salida del sol:</th>
+            <td><asp:Label ID="horaSa" runat="server" CssClass="title"></asp:Label></td>
+        </tr>
+        <tr>
+            <th>Hora de puesta del sol:</th>
+            <td><asp:Label ID="horaPu" runat="server" CssClass="title"></asp:Label></td>
+        </tr>
+    </table>
+</div>
+
         </form> 
     <div class="container text-center mt-4">
         <div id="player"></div>
+    </div>
+    <div class="container text-center mt-3">
+        <iframe width="460" height="400" frameboard="0" runat="server" id="gasolina"></iframe>
+    </div>
+    <div class="container">
+        <asp:Label ID="labelDivisa" runat="server" CssClass="title"></asp:Label>
     </div>
 </body>
 </html>

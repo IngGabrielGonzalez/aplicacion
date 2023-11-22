@@ -15,10 +15,10 @@ namespace MashUp.Models
         public long place_id { get; set; }
 
 
-        public string Lat { get; set; }
+        public string lat { get; set; }
 
 
-        public string Lon { get; set; }
+        public string lon { get; set; }
 
 
         public string addresstype { get; set; }

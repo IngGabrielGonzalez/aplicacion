@@ -5,40 +5,46 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
-using static MashUp.Models.Location;
+using System.Web.UI;
 
 namespace MashUp.Models
 {
-    public class Helper
+    public class HelperDivisas
     {
-        Location root;
-        HelperPuebla helper;
+        //Accedemos a la clase Datadivisas
+        DataDivisas data;
 
-
-        string DirBase;
-        public string Error { get; set; }
-
-        public string ciudad { get; set; }
-        public string pais { get; set; }
-
+        //Manejador de mensajes
         HttpMessageHandler HandlerDatos;
 
-        public Helper()
+
+        //Creamos la dirección base:
+        string DirBase;
+
+        string Error;
+        public string monedaNativa { get; set; }
+        public string monedaObjetivo { get; set; }
+
+        public string monto { get; set; }
+
+        //Método constructor
+        public HelperDivisas()
         {
             HandlerDatos = new HttpClientHandler();
         }
 
-        public async Task ObtenerData()
+
+        public async Task ObtenerDivisa()
         {
-            // Nuestro EndPoint https://nominatim.openstreetmap.org/search?q=puebla&countrycodes=mx&format=json&addressdateils=1
+            // Nuestro EndPoint https://exchange-rates.abstractapi.com/v1/live/?api_key=d5facf2d7b944c85a560c6d623b56597&base=mxn
 
             //Definimos nuestra Dirección Base
-            DirBase = "https://nominatim.openstreetmap.org";
+            DirBase = "https://exchange-rates.abstractapi.com";
 
             //Y nuestro URI
             try
             {
-                string solicitudCliente = $"/search?q={ciudad}&countrycodes={pais}&format=json&addressdetails=0";
+                string solicitudCliente = $"/v1/live/?api_key=d5facf2d7b944c85a560c6d623b56597&base=mxn";
                 try
                 {
                     //Se crea la instancia HttpCliente, el objeto se destruye al 
@@ -49,7 +55,7 @@ namespace MashUp.Models
                         Cliente.BaseAddress = new Uri(DirBase);
                         Cliente.DefaultRequestHeaders.Accept.Clear();
                         Cliente.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/Json"));
-                        Cliente.DefaultRequestHeaders.Add("User-Agent", "Identificador");
+                        Cliente.DefaultRequestHeaders.Add("X-API-Key", "d5facf2d7b944c85a560c6d623b56597");
 
                         //se hace la solicitud del servicio web, y se verifica que la solicitud sea exitosa
                         HttpResponseMessage respuesta = await Cliente.GetAsync($"{solicitudCliente}");
@@ -62,7 +68,7 @@ namespace MashUp.Models
                             //Deserializaremos el json a la clase 'DatosClimaPuebla'
                             //la clase
 
-                            root = JsonConvert.DeserializeObject<List<Location>>(jsoncadena).FirstOrDefault();
+                            data = JsonConvert.DeserializeObject<DataDivisas>(jsoncadena);
                         }
                         else
                         {
@@ -84,40 +90,8 @@ namespace MashUp.Models
             {
                 Error = "Ha ocurrido un error";
             }
-          }
-
-
-      
-
-        public string obtenerLatitud()
-        {
-            if(root == null)
-            {
-                return "Valor no disponible";
-            }
-            else
-            {
-                return root.lat;
-
-            }
-
-
-        }
-        public string obtenerLongitud()
-        {
-            if(root == null)
-            {
-                return "Valor no disponible";
-            }
-            else
-            {
-
-            return root.lon;
-            }
-
-
         }
 
+        
     }
-
 }

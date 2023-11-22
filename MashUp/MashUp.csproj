@@ -123,9 +123,13 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Codigos.cs" />
+    <Compile Include="Models\DataDivisas.cs" />
     <Compile Include="Models\DataHelper.cs" />
     <Compile Include="Models\DatosClimaPuebla.cs" />
     <Compile Include="Models\Helper.cs" />
+    <Compile Include="Models\HelperDivisas.cs" />
+    <Compile Include="Models\HelperGasolina.cs" />
     <Compile Include="Models\HelperPuebla.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

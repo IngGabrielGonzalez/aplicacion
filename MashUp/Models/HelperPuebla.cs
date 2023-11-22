@@ -16,11 +16,9 @@ namespace MashUp.Models
     public class HelperPuebla
     {
         Temperatures dato;
-        Helper nuevo;
 
         string DirBase;
-        string Error { get; set; }
-
+        public string Error { get; set; }
 
         HttpMessageHandler HandlerClima;
 
@@ -30,7 +28,7 @@ namespace MashUp.Models
         }
 
 
-        public async Task ObtenerDatosPuebla()
+        public async Task ObtenerDatosPuebla(string lat, string lon)
         {
             // Nuestro EndPoint https://api.openweathermap.org/data/2.5/weather?lat=18.833333&lon=-98.0&appid=5c06c6e640d5d7b37544317e22c5bad0
 
@@ -38,9 +36,8 @@ namespace MashUp.Models
             DirBase = "https://api.openweathermap.org";
 
             //Y nuestro URI
-            string solicitudCliente = "/data/2.5/weather?lat=18.833333&lon=-98.0&appid=5c06c6e640d5d7b37544317e22c5bad0&lang=es";
 
-
+            string solicitudCliente = $"/data/2.5/weather?lat={lat}&lon={lon}&appid=5c06c6e640d5d7b37544317e22c5bad0&lang=es";
             try
             {
                 //Se crea la instancia HttpCliente, el objeto se destruye al 
@@ -62,8 +59,11 @@ namespace MashUp.Models
                         var jsoncadena = await respuesta.Content.ReadAsStringAsync();
                         //Deserializaremos el json a la clase 'DatosClimaPuebla'
                         //la clase
+
                         dato = JsonConvert.DeserializeObject<Temperatures>(jsoncadena);
-            
+
+
+
                     }
                     else
                     {
@@ -83,80 +83,158 @@ namespace MashUp.Models
 
 
 
+
+
         //Funciones propias para Obtener datos de PUEBLA
 
         public string ObtenerNombre()
         {
-            var nombre = dato.Name;
-            return nombre.ToString();
+            if (dato == null)
+            {
+                return "Valor no disponible";
+            }
+            return dato.Name;
+
         }
 
         //Obtener la temperatura actual
         public string ObtenerTemperatura()
         {
-            var temp = dato.Main.Temp - 273.15 + "°";
-            return temp.ToString();
+            if (dato == null)
+            {
+                return "Valor no disponible";
+
+            }
+            else
+            {
+                var temp = dato.Main.Temp - 273.15 + "°";
+                return temp.ToString();
+            }
+
         }
 
         //Obtener la temperatura máxima
         public string ObtenerTemperaturaMaxima()
         {
-            var tempMax = dato.Main.temp_max - 273.15 + "°";
-            return tempMax.ToString();
+            if (dato == null)
+            {
+                return "Valor no disponible";
+            }
+            else
+            {
+                var tempMax = dato.Main.temp_max - 273.15 + "°";
+                return tempMax.ToString();
+            }
+
         }
 
         //Obtener la temperatura mínima
         public string ObtenerTemperaturaMinima()
         {
-            var tempMin = dato.Main.temp_min - 273.15 + "°";
-            return tempMin.ToString();
+            if (dato == null)
+            {
+                return "Valor no disponible";
+            }
+            else
+            {
+                var tempMin = dato.Main.temp_min - 273.15 + "°";
+                return tempMin.ToString();
+            }
+
         }
 
         //Obtener la imagen descriptiva del clima
         public string ObtenerImagen()
         {
-            var img = dato.Weather[0].Icon;
-            var urlImg = $"http://openweathermap.org/img/wn/{img}.png";
-            return urlImg;
+            if (dato == null)
+            {
+                return "Valor no disponible";
+            }
+            else
+            {
+                var img = dato.Weather[0].Icon;
+                var urlImg = $"http://openweathermap.org/img/wn/{img}.png";
+                return urlImg;
+            }
+
         }
 
         //Obtener la descripción
         public string ObtenerDescripcion()
         {
-            var desc = dato.Weather[0].Description;
-            return desc.ToString();
+            if (dato == null)
+            {
+                return "Valor no disponible";
+            }
+            else
+            {
+                var desc = dato.Weather[0].Description;
+                return desc.ToString();
+            }
+
         }
         //Obtener la nubosidad
         public string ObtenerNubosidad()
         {
-            var clouds = dato.Clouds.All;
-            return clouds.ToString();
+            if (dato == null)
+            {
+                return "Valor no disponible";
+            }
+            else
+            {
+                var clouds = dato.Clouds.All;
+                return clouds.ToString();
+            }
+
         }
 
         //Obtener la Humedad
         public string ObtenerHumedad()
         {
-            var humedad = dato.Main.Humidity;
-            return humedad.ToString();
+            if (dato == null)
+            {
+                return "Valor no disponible";
+            }
+            else
+            {
+                var humedad = dato.Main.Humidity;
+                return humedad.ToString();
+
+            }
         }
 
         //Obtener la hora de salida del sol
         public string ObtenerHoraSalidaSol()
         {
-            DateTime date = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-            date = date.AddSeconds(dato.Sys.Sunrise);
-            return date.ToString();
+            if (dato == null)
+            {
+                return "Valor no disponible";
+            }
+            else
+            {
+                DateTime date = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+                date = date.AddSeconds(dato.Sys.Sunrise);
+                return date.ToString();
+            }
+
         }
 
         //Obtener la hora de puesta del sol
         public string ObtenerHoraPuestaSol()
         {
+            if (dato == null)
+            {
+                return "Valor no disponible";
+            }
+            else
+            {
+                DateTime fecha = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+                fecha = fecha.AddSeconds(dato.Sys.Sunset);
 
-            DateTime fecha = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-            fecha = fecha.AddSeconds(dato.Sys.Sunset);
 
-       
-            return fecha.ToString();
+                return fecha.ToString();
+            }
+
 
         }
     }
