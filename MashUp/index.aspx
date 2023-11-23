@@ -239,7 +239,7 @@
                             <asp:DropDownList ID="DropDownList2" runat="server" CssClass="form-select"></asp:DropDownList>
                         </div>
                         <asp:Button ID="Button2" runat="server" Text="Convertir" CssClass="btn btn-success" OnClick="Button2_Click" />
-                        <asp:Label ID="resultadoConversion" runat="server" Text="Label" CssClass="mt-2 d-block"></asp:Label>
+                        <asp:Label ID="resultadoConversion" runat="server" Text="" CssClass="mt-2 d-block"></asp:Label>
                     </div>
                 </div>
             </div>

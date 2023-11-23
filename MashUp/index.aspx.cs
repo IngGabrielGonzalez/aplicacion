@@ -133,8 +133,8 @@ namespace MashUp
         protected async void Button2_Click(object sender, EventArgs e)
         {
 
-            helperDivisa.monedaNativa = DropDownList1.SelectedValue;
-            helperDivisa.monedaObjetivo = DropDownList2.SelectedValue;
+            helperDivisa.monedaNativa = DropDownList1.SelectedValue.ToString();
+            helperDivisa.monedaObjetivo = DropDownList2.SelectedValue.ToString();
 
             helperDivisa.monto = montoDeseado.Text;
             await helperDivisa.ObtenerDivisa();

@@ -8,7 +8,7 @@ namespace MashUp.Models
 {
     public class DataDivisas
     {
-        public string @base { get; set; }
+        
         public string target { get; set; }
         public int base_amount { get; set; }
         public double converted_amount { get; set; }

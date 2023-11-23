@@ -217,6 +217,10 @@ namespace MashUp.Models
                     abreviatura = DatosCodigos[i].Abreviatura;
                     break;
                 }
+                else
+                {
+                    return "Error: el estado es incorrecto";
+                }
             }
             return abreviatura;
         }

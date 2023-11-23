@@ -97,8 +97,15 @@ namespace MashUp.Models
 
         public string ObtenerMonto()
         {
+            if(data == null)
+            {
+                return "Has ingresado un valor incorrecto";
+            }
+            else
+            {
+                return data.converted_amount.ToString();
 
-            return data.converted_amount.ToString();
+            }
         }
     }
 }
