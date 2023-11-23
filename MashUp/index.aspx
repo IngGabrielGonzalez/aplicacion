@@ -64,7 +64,7 @@
                             <img src="https://img.travesiasdigital.com/2019/04/visitar-puebla.jpg" class="d-block w-100" alt="img_dos" />
                         </div>
                         <div class="carousel-item">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu-Bpu-EUYvxiUJeCnH9TkqOhugsI99Yr3Mw&usqp=CAU" class="d-block w-100" alt="img_tres" />
+                            <img src="https://content.r9cdn.net/rimg/dimg/5b/6d/745672d2-city-17433-1682a0c64be.jpg?width=1366&height=768&xhint=2100&yhint=2160&crop=true" class="d-block w-100" alt="img_tres" />
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

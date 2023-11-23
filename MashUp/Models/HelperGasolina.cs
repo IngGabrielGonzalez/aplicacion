@@ -210,17 +210,14 @@ namespace MashUp.Models
         public string ObtenerAbreviatura()
         {
             string abreviatura = "";
-            for(int i = 0; i <= DatosCodigos.Count -1; i++)
+            for (int i = 0; i <= DatosCodigos.Count - 1; i++)
             {
                 if (DatosCodigos[i].Estado.ToUpper() == ciudad.ToUpper())
                 {
                     abreviatura = DatosCodigos[i].Abreviatura;
                     break;
-                }
-                else
-                {
-                    return "Error: el estado es incorrecto";
-                }
+                } 
+               
             }
             return abreviatura;
         }
